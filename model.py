@@ -14,6 +14,7 @@ import torch
 import requests
 import json
 import time
+import re
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 # 这个文件实现了RAG系统的两个核心组件
@@ -22,6 +23,32 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 
 print("ChromaDB version:", chromadb.__version__)
 print("Langchain version:", langchain.__version__)
+
+def safe_json_parse(content):
+    """
+    安全解析JSON，处理多行JSON或包含额外数据的情况
+    """
+    try:
+        # 尝试常规解析
+        return json.loads(content)
+    except json.JSONDecodeError:
+        try:
+            # 尝试查找第一个有效的JSON对象
+            content_str = content if isinstance(content, str) else content.decode('utf-8')
+            # 使用正则表达式找到第一个完整的JSON对象
+            match = re.search(r'(\{.*?\})', content_str, re.DOTALL)
+            if match:
+                return json.loads(match.group(1))
+            
+            # 如果上面失败，尝试分割多行JSON并解析第一行
+            lines = content_str.strip().split('\n')
+            if lines and lines[0]:
+                return json.loads(lines[0])
+        except Exception as inner_e:
+            print(f"内部解析错误: {str(inner_e)}")
+        
+        print(f"无法解析响应: {content[:100]}...")
+        return {"response": "无法解析模型响应"}
 
 class RagLLM(object):
     def __init__(self, model_name="qwen:14b", api_base="http://localhost:11434/api", timeout=10):
@@ -51,7 +78,16 @@ class RagLLM(object):
             start_time = time.time()
             response = requests.post(url, json=payload, timeout=self.timeout)
             response.raise_for_status()  # 确保请求成功
-            result = response.json()
+            
+            # 使用安全解析函数处理响应
+            try:
+                result = safe_json_parse(response.content)
+            except Exception as json_error:
+                print(f"JSON解析错误: {str(json_error)}")
+                # 如果解析失败，尝试直接从文本中提取响应内容
+                text = response.text
+                print(f"原始响应: {text[:200]}...")
+                return text
             
             # 打印请求耗时，帮助调试
             elapsed = time.time() - start_time
@@ -132,7 +168,28 @@ class QwenLLM(LLM):
                 
                 response = requests.post(url, json=payload, timeout=self.timeout)
                 response.raise_for_status()  # 确保请求成功
-                result = response.json()
+                
+                # 使用安全解析函数处理响应
+                try:
+                    result = safe_json_parse(response.content)
+                except Exception as json_error:
+                    print(f"JSON解析错误: {str(json_error)}")
+                    if run_manager:
+                        run_manager.on_text(f"警告: JSON解析错误: {str(json_error)}\n", verbose=True)
+                    
+                    # 如果解析失败，尝试直接将响应内容作为结果返回
+                    if response.text and len(response.text) > 0:
+                        text = response.text
+                        
+                        # 尝试从响应文本中提取可能的回答
+                        content_match = re.search(r'"response"\s*:\s*"([^"]*)"', text)
+                        if content_match:
+                            return content_match.group(1)
+                        
+                        # 如果没有匹配到，返回完整响应作为结果
+                        print(f"返回原始响应作为结果: {text[:200]}...")
+                        return text.strip()
+                    return ""
                 
                 # 记录API调用统计
                 elapsed = time.time() - start_time
@@ -149,6 +206,10 @@ class QwenLLM(LLM):
                 if not generated_text or not isinstance(generated_text, str):
                     if run_manager:
                         run_manager.on_text("警告: 服务器返回空响应\n", verbose=True)
+                    # 尝试直接从原始响应中提取文本
+                    if response.text and len(response.text) > 0:
+                        print(f"尝试从原始响应提取文本: {response.text[:100]}...")
+                        return response.text.strip()
                     return ""
                     
                 # 清理和格式化响应文本
