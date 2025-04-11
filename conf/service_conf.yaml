@@ -1,0 +1,14 @@
+use_deserialize_safe_module: false
+
+model:
+  embedding_model: "thenlper/gte-large-zh"
+  device: "cpu"
+
+database:
+  type: "chroma"
+  host: "localhost"
+  port: 8000
+
+parser:
+  layout_recognize: true
+  lang: "Chinese" 

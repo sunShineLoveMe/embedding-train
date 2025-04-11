@@ -1,0 +1,344 @@
+[33mWARNING[0m:  [03-04-2025 11:33:02] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[33mWARNING[0m:  [03-04-2025 11:38:32] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [03-04-2025 11:38:32] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component System
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component SqliteDB
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component Posthog
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component LocalExecutor
+[36mDEBUG[0m:    [03-04-2025 11:38:32] Starting component SegmentAPI
+[32mINFO[0m:     [03-04-2025 11:38:32] Started server process [[36m68382[0m]
+[32mINFO[0m:     [03-04-2025 11:38:32] Waiting for application startup.
+[32mINFO[0m:     [03-04-2025 11:38:32] Application startup complete.
+[32mINFO[0m:     [03-04-2025 11:38:32] Uvicorn running on [1mhttp://127.0.0.1:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [03-04-2025 11:45:55] 127.0.0.1:60434 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 11:45:55] 127.0.0.1:60436 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 11:58:38] 127.0.0.1:49157 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 11:58:42] 127.0.0.1:49178 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [03-04-2025 11:58:42] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [03-04-2025 11:58:42] 127.0.0.1:49180 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/add HTTP/1.1" 201
+[32mINFO[0m:     [03-04-2025 11:58:54] 127.0.0.1:49263 - "GET /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/count HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 12:00:12] 127.0.0.1:49755 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/get HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:11:32] 127.0.0.1:59708 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/get HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:21:44] 127.0.0.1:63655 - "GET /api/v1/collections/rag_db?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:21:46] 127.0.0.1:63671 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/get HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:28:28] 127.0.0.1:50044 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/query HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:29:53] 127.0.0.1:50566 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/query HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:31:12] 127.0.0.1:51186 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/query HTTP/1.1" 200
+[32mINFO[0m:     [03-04-2025 14:37:28] 127.0.0.1:53564 - "POST /api/v1/collections/ad87323a-23f0-4a18-b655-b6d6a0cd5334/query HTTP/1.1" 200
+[33mWARNING[0m:  [08-04-2025 10:10:36] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [08-04-2025 10:10:36] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component System
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component SqliteDB
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component Posthog
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [08-04-2025 10:10:36] Starting component SegmentAPI
+[32mINFO[0m:     [08-04-2025 10:10:36] Started server process [[36m65099[0m]
+[32mINFO[0m:     [08-04-2025 10:10:36] Waiting for application startup.
+[32mINFO[0m:     [08-04-2025 10:10:36] Application startup complete.
+[32mINFO[0m:     [08-04-2025 10:10:36] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [08-04-2025 10:11:09] ::1:57609 - "GET /api/v1/heartbeat HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:11:33] 127.0.0.1:58024 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:11:33] 127.0.0.1:58027 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [08-04-2025 10:13:24] no such column: collections.topic
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 111, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 106, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 124, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 80, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 173, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 175, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 94, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2461, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 962, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/auth/fastapi.py", line 234, in wrapped
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 408, in create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/api/segment.py", line 166, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 209, in create_collection
+    existing = self.get_collections(name=name, tenant=tenant, database=database)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: collections.topic
+[32mINFO[0m:     [08-04-2025 10:13:24] 127.0.0.1:59979 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 500
+[31mERROR[0m:    [08-04-2025 10:13:24] Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 111, in receive
+    return self.receive_nowait()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 106, in receive_nowait
+    raise WouldBlock
+anyio.WouldBlock
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 124, in receive
+    return receiver.item
+           ^^^^^^^^^^^^^
+AttributeError: 'MemoryObjectItemReceiver' object has no attribute 'item'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/june/marker-env/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/opentelemetry/instrumentation/asgi/__init__.py", line 743, in __call__
+    await self.app(scope, otel_receive, otel_send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 181, in __call__
+    raise app_exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 80, in catch_exceptions_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 173, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_utils.py", line 82, in collapse_excgroups
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 175, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 94, in check_http_version_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/fastapi/routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2461, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 962, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/auth/fastapi.py", line 234, in wrapped
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/server/fastapi/__init__.py", line 408, in create_collection
+    return self._api.create_collection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/api/segment.py", line 166, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 209, in create_collection
+    existing = self.get_collections(name=name, tenant=tenant, database=database)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 127, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/june/marker-env/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 435, in get_collections
+    rows = cur.execute(sql, params).fetchall()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: collections.topic
+[33mWARNING[0m:  [08-04-2025 10:14:57] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [08-04-2025 10:14:57] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component System
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component SimpleAssignmentPolicy
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component SqliteDB
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component Posthog
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [08-04-2025 10:14:57] Starting component SegmentAPI
+[32mINFO[0m:     [08-04-2025 10:14:57] Started server process [[36m73517[0m]
+[32mINFO[0m:     [08-04-2025 10:14:57] Waiting for application startup.
+[32mINFO[0m:     [08-04-2025 10:14:57] Application startup complete.
+[32mINFO[0m:     [08-04-2025 10:14:57] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [08-04-2025 10:15:30] ::1:62073 - "GET /api/v1/heartbeat HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:15:53] 127.0.0.1:62466 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:15:56] 127.0.0.1:62540 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:15:56] 127.0.0.1:62542 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:15:58] 127.0.0.1:62572 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:17:13] 127.0.0.1:63915 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:17:13] 127.0.0.1:63917 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:17:24] 127.0.0.1:64121 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:17:24] 127.0.0.1:64123 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [08-04-2025 10:17:25] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [08-04-2025 10:17:25] 127.0.0.1:64132 - "POST /api/v1/collections/26126873-d6cc-4eac-9deb-2a229728be6d/upsert HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:17:25] 127.0.0.1:64141 - "POST /api/v1/collections/26126873-d6cc-4eac-9deb-2a229728be6d/query HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:26] 127.0.0.1:65132 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:26] 127.0.0.1:65134 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:28] 127.0.0.1:65167 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:52] 127.0.0.1:49170 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:52] 127.0.0.1:49172 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:18:54] 127.0.0.1:49204 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:34:18] 127.0.0.1:65338 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:34:18] 127.0.0.1:65340 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:36:39] 127.0.0.1:51386 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:36:39] 127.0.0.1:51388 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [08-04-2025 10:36:46] 127.0.0.1:51526 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
